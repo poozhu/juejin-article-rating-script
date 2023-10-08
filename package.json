@@ -1,0 +1,27 @@
+{
+  "name": "juejin-article-rating-script",
+  "version": "1.0.0",
+  "description": "!",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "poozhu",
+  "license": "ISC",
+  "devDependencies": {
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2",
+    "prettier": "^2.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npx lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,vue,css,less,html,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  }
+}
